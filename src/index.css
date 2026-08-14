@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@400;600;700;800&display=swap");
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #07081a;
+  --color-card: #101228;
+  --color-card-hover: #171b3d;
+  --color-primary: #6366f1;
+  --color-accent: #a855f7;
+  --color-border: #26294d;
+  --color-text: #e8eaf6;
+  --color-muted: #8b90b5;
+
+  --font-display: "Nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+}
+
+button {
+  font: inherit;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
+
+/* =========================
+   KEYFRAME ANIMATIONS
+========================= */
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 12px rgba(249, 115, 22, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(249, 115, 22, 0.65);
+  }
+}
+
+@keyframes card-click {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(0.92);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes wrong-shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-9px);
+  }
+  40% {
+    transform: translateX(9px);
+  }
+  60% {
+    transform: translateX(-6px);
+  }
+  80% {
+    transform: translateX(6px);
+  }
+}
+
+@keyframes star-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.animate-card-click {
+  animation: card-click 0.4s ease;
+}
+
+.animate-wrong-shake {
+  animation: wrong-shake 0.55s ease;
+}
+
+.animate-star-spin {
+  animation: star-spin 9s linear infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.4s ease both;
+}
+
+/* =========================
+   TYPE COLORS
+========================= */
+
+.type-fire {
+  --type-color: #f08030;
+  --type-glow: rgba(240, 128, 48, 0.45);
+}
+
+.type-water {
+  --type-color: #6890f0;
+  --type-glow: rgba(104, 144, 240, 0.45);
+}
+
+.type-grass {
+  --type-color: #78c850;
+  --type-glow: rgba(120, 200, 80, 0.45);
+}
+
+.type-bug {
+  --type-color: #a8b820;
+  --type-glow: rgba(168, 184, 32, 0.45);
+}
+
+.type-flying {
+  --type-color: #a890f0;
+  --type-glow: rgba(168, 144, 240, 0.45);
+}
+
+.type-normal {
+  --type-color: #a8a878;
+  --type-glow: rgba(168, 168, 120, 0.45);
+}
+
+.type-poison {
+  --type-color: #a040a0;
+  --type-glow: rgba(160, 64, 160, 0.45);
+}
+
+.type-electric {
+  --type-color: #f8d030;
+  --type-glow: rgba(248, 208, 48, 0.45);
+}
+
+.type-ground {
+  --type-color: #e0c068;
+  --type-glow: rgba(224, 192, 104, 0.45);
+}
+
+.type-ice {
+  --type-color: #98d8d8;
+  --type-glow: rgba(152, 216, 216, 0.45);
+}
+
+.type-fairy {
+  --type-color: #ee99ac;
+  --type-glow: rgba(238, 153, 172, 0.45);
+}
+
+.type-psychic {
+  --type-color: #f85888;
+  --type-glow: rgba(248, 88, 136, 0.45);
+}
+
+.type-fighting {
+  --type-color: #c03028;
+  --type-glow: rgba(192, 48, 40, 0.45);
+}
+
+.type-rock {
+  --type-color: #b8a038;
+  --type-glow: rgba(184, 160, 56, 0.45);
+}
+
+.type-ghost {
+  --type-color: #705898;
+  --type-glow: rgba(112, 88, 152, 0.45);
+}
+
+.type-dragon {
+  --type-color: #7038f8;
+  --type-glow: rgba(112, 56, 248, 0.45);
+}
+
+.type-dark {
+  --type-color: #705848;
+  --type-glow: rgba(112, 88, 72, 0.45);
+}
+
+.type-steel {
+  --type-color: #b8b8d0;
+  --type-glow: rgba(184, 184, 208, 0.45);
+}
+
+.type-default {
+  --type-color: #8b90b5;
+  --type-glow: rgba(139, 144, 181, 0.45);
+}
+
+/* =========================
+   STARFIELD
+========================= */
+
+.starfield {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+
+  border-radius: 9999px;
+  background: #ffffff;
+}
