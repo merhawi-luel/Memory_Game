@@ -155,6 +155,7 @@
 
 .card:hover {
   transform: translateY(-6px);
+  box-shadow: 0 0 30px var(--type-glow);
 }
 
 .card:active {

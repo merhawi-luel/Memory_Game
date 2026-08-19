@@ -1,7 +1,4 @@
-/*
-  Maps each Pokémon type to a CSS class that sets --type-color
-  (border + badge) and --type-glow (hover glow).
-*/
+
 const TYPE_STYLES = {
   fire: "type-fire",
   water: "type-water",
@@ -37,12 +34,6 @@ function Card({ pokemon, onClick, animating }) {
         isWrong ? "animate-wrong-shake" : ""
       }`}
       onClick={onClick}
-      onMouseEnter={(event) => {
-        event.currentTarget.style.boxShadow = "0 0 30px var(--type-glow)";
-      }}
-      onMouseLeave={(event) => {
-        event.currentTarget.style.boxShadow = "";
-      }}
     >
 
       <img
