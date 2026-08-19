@@ -44,7 +44,6 @@ function Card({ pokemon, onClick, animating }) {
         event.currentTarget.style.boxShadow = "";
       }}
     >
-      <span className="type-badge">{pokemon.type}</span>
 
       <img
         className="card-sprite"
