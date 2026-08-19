@@ -2,7 +2,6 @@ function GameOverModal({ score, best, onRestart }) {
   return (
     <div className="modal-overlay modal-lost">
       <div className="modal animate-fade-in-up">
-        <div className="modal-icon">💀</div>
 
         <h2>Game Over!</h2>
 

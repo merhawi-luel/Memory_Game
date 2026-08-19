@@ -75,8 +75,8 @@ function App() {
             </div>
 
             <p className="mx-auto mt-4 max-w-xl leading-relaxed text-muted">
-              Click every Pokémon exactly once. The board shuffles after
-              each pick — repeat one and it&apos;s game over!
+              Click every Pokemon exactly once. The board shuffles after
+              each pick.Repeat one and it&apos;s game over!
             </p>
           </div>
 

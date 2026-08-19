@@ -55,9 +55,7 @@ function Card({ pokemon, onClick, animating }) {
 
       <span className="card-name">{pokemon.name}</span>
 
-      <span className="dex-number">
-        #{String(pokemon.id).padStart(3, "0")}
-      </span>
+      
     </button>
   );
 }
